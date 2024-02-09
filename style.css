@@ -76,7 +76,7 @@ img{
     background-color: #047aed;
     color: #fff;
     position:relative;
-    justify-self: self-end;
+    justify-self: flex-end;
 }
 .details-text{
     font-size: 18px;
@@ -89,6 +89,7 @@ img{
 .details .grid{
     grid-template-columns: 55% 45%;
     gap: 30px;
+    overflow: visible;
 }
 
 .details a {
@@ -111,7 +112,7 @@ img{
 .details-page{
     position: relative;
     top: 60px;
-    height: 350px;
+    height: 300px;
     padding: 40px;
     z-index: 100;
     justify-self: flex-end;
@@ -141,10 +142,10 @@ img{
 }
 
 .card{
-    background-color: azure;
+    background-color: #f1f3f5;
     color: #333;
     border-radius: 10px;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
     padding: 20px;
     margin: 10px;
     text-align: center;
@@ -159,7 +160,9 @@ img{
     font-weight: 400;
     line-height: 1.2;
     margin: 10px 0px;
+    color: #fff;
 }
+
 
 .btn{
     display: inline-block;
@@ -209,12 +212,13 @@ img{
 }
 
 .features-head p{
-    margin: 10px 40px;
+    margin: 10px 10px;
 }
 
 .features-text p{
     font-family: 'Lato';
     font-size: 20px;
+    margin: 10px 20px;
 }
 
 .features-text h2{
@@ -222,7 +226,7 @@ img{
     font-size: 40px;
     font-weight: 500;
     line-height: 1.2;
-    margin: 10px 0px;
+    margin: 10px 20px;
 }
 .section p{
     color: #333;
@@ -257,6 +261,7 @@ img{
     color: #fff;
     position:relative;
     line-height: 2.2;
+    
 
 }
 .services img{
@@ -310,6 +315,53 @@ img{
     margin-top: 20px;
 }
 
+
+/* Contact Page CSS */
+
+.details-form{
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    margin: 50px 30px;
+}
+.contact h2{
+    color: #0c0000;
+}
+
+.card .form-control{
+    margin: 30px 0px;
+}
+
+.card .form-control input[type='text'],
+.card .form-control input[type='email'],
+.card .form-control input[type='tel'],
+.card .form-control input[type='date']{
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 20px;
+}
+
+.card .form-control input:focus{
+    outline: none;
+}
+
+.contact img{
+    position:relative;
+    width: 600px;
+    height: 400px;
+    padding: 0px;
+    margin: 50px 300px;
+    z-index: 100;
+    justify-self: center;
+    box-shadow:  0 20px 20px rgba(0, 0, 0, 0.5);
+}
+
+
   /* Footer */
 
 .bg-dark a{
@@ -344,10 +396,13 @@ footer a:hover {
     .details .grid
     {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr
+        grid-template-rows: 1fr;
     }
     .details{
         height: auto;
+    }
+    .section, .services{
+       height: auto;
     }
 }
 
@@ -364,6 +419,8 @@ footer a:hover {
         padding: 10px;
         background-color: rgba(0, 0, 0, 0.1);
     }
+   
+
 }
 
 
