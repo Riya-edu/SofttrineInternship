@@ -1,4 +1,4 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
+document.getElementById('contactForm').addEventListener('Submit', function(event) {
     event.preventDefault();
     validateForm();
 });
@@ -33,10 +33,10 @@ function validateForm() {
 
     // Validate Phone
     if (phone === '') {
-        displayError('number', 'Phone number is required');
+        displayError('phone', 'Phone number is required');
         isValid = false;
-    } else if (!isValidPhone(phone)) {
-        displayError('number', 'Invalid phone number');
+    } else if (!/^\+91\d{10}$/.test(phone)) {
+        displayError('phone', 'Invalid phone number');
         isValid = false;
     }
 
@@ -63,7 +63,7 @@ function isValidEmail(email) {
 
 function isValidPhone(number) {
     const phoneRegex = /^\d{10}$/;
-    return phoneRegex.test(phone);
+    return phoneRegex.test(number);
 }
 
 function isValidDOB(dob) {
