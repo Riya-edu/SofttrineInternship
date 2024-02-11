@@ -350,7 +350,7 @@ img{
     outline: none;
 }
 
-.contact img{
+/* .contact img{
     position:relative;
     width: 600px;
     height: 400px;
@@ -359,7 +359,7 @@ img{
     z-index: 100;
     justify-self: center;
     box-shadow:  0 20px 20px rgba(0, 0, 0, 0.5);
-}
+} */
 
 
   /* Footer */
@@ -385,6 +385,14 @@ footer a:hover {
     border-bottom: 2px #fff solid;
 }
 
+.contact img {
+    width: 100%; 
+    height: auto; 
+    max-width: 600px; 
+    margin: 50px auto; 
+    display: block; 
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
+}
 
 
 /* RESPONSIVE */
@@ -403,6 +411,10 @@ footer a:hover {
     }
     .section, .services{
        height: auto;
+    }
+    .contact img {
+        max-width: 90%; 
+        margin: 30px auto; 
     }
 }
 
